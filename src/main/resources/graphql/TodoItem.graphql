@@ -1,0 +1,22 @@
+schema{
+query: Query
+mutation:Mutation
+}
+type Mutation{
+addItem(category:String, name:String, complete:Boolean):TodoItem
+deleteItem(id:Int):String
+updateItem(id:Int,category:String, name:String, complete:Boolean):TodoItem
+}
+
+
+type Query{
+getAllItems:[TodoItem]
+}
+
+
+type TodoItem{
+      id:Int
+      category:String
+      name : String
+      complete:Boolean
+}
